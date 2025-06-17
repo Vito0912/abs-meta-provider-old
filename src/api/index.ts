@@ -80,7 +80,7 @@ export class ApiRouter {
       }
 
       const results = await provider.searchWithCache(query);
-      res.json({ results, provider: providerName });
+      res.json({ matches: results, provider: providerName });
     } catch (error) {
       const message = error instanceof Error ? error.message : 'Unknown error';
       console.error(`Search error:`, message);
@@ -128,7 +128,7 @@ export class ApiRouter {
 
       console.log(`Path params:`, pathParams);
       const results = await provider.searchWithCache(query, pathParams);
-      res.json({ results, provider: providerName, pathParams });
+      res.json({ matches: results, provider: providerName, pathParams });
     } catch (error) {
       const message = error instanceof Error ? error.message : 'Unknown error';
       console.error(`Search error:`, message);
