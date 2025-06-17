@@ -1,0 +1,35 @@
+{
+  "name": "abs-meta",
+  "version": "1.0.0",
+  "description": "Metadata provider framework for AudioBookShelf",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "clean": "rimraf dist",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.0",
+    "@types/sqlite3": "^3.1.11",
+    "prettier": "^3.5.3",
+    "rimraf": "^5.0.5",
+    "tsx": "^4.6.0",
+    "typescript": "^5.3.0"
+  },
+  "keywords": [
+    "audiobook",
+    "metadata",
+    "api"
+  ],
+  "author": "",
+  "license": "MIT"
+}
