@@ -44,7 +44,7 @@ class App {
     }
   }
 
-  async start(port: number = 3000): Promise<void> {
+  async start(port: number = Number(process.env.PORT) || 8723): Promise<void> {
     this.ensureDataDirectory();
     await this.providerManager.loadProviders();
 

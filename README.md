@@ -36,13 +36,25 @@ npm install
 npm run dev
 ```
 
-This starts the development server with hot reloading on port 3000.
+This starts the development server with hot reloading on port 8723.
 
 ### Production
 
 ```bash
 npm run build
 npm start
+```
+
+## Docker
+
+```yaml
+services:
+  abs-meta:
+    image: ghcr.io/vito0912/abs-meta:latest
+    ports:
+      - "8723:8723"
+    volumes:
+      - ./data:/app/data
 ```
 
 ## API Endpoints
@@ -73,13 +85,13 @@ GET /:provider/:language/search?query=<search_term>
 
 ```bash
 # Search BookBeat in German
-curl "http://localhost:3000/bookbeat/de/search?query=harry+potter"
+curl "http://localhost:8723/bookbeat/de/search?query=harry+potter"
 
 # Search Storytel in English  
-curl "http://localhost:3000/storytel/en/search?query=dune"
+curl "http://localhost:8723/storytel/en/search?query=dune"
 
 # Get list of providers
-curl "http://localhost:3000/providers"
+curl "http://localhost:8723/providers"
 ```
 
 ## Adding New Providers
@@ -95,7 +107,7 @@ Want to add support for a new metadata source? Check out our [Provider Developme
 
 The application uses the following default configuration:
 
-- **Port**: 3000 (configurable via environment)
+- **Port**: 8723 (configurable via environment)
 - **Cache**: SQLite database in `data/cache.db`
 
 ## Scripts
@@ -106,6 +118,13 @@ The application uses the following default configuration:
 - `npm run clean` - Remove compiled files
 - `npm run format` - Format code with Prettier
 - `npm run format:check` - Check code formatting
+
+### Docker Scripts
+
+- `docker build -t abs-meta .` - Build Docker image
+- `docker run -p 8723:8723 abs-meta` - Run container
+- `docker-compose up -d` - Start with docker-compose
+- `docker-compose down` - Stop docker-compose services
 
 ## Dependencies
 
