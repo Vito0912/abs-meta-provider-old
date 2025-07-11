@@ -32,25 +32,3 @@ The provider supports the following language codes, which correspond to differen
 ## Required Parameters
 
 - **language**: The language/country code for the Storytel catalog to search (required)
-
-## What the Provider Returns
-
-The Storytel provider returns detailed book metadata with the following fields:
-
-- title
-- subtitle
-- author
-- language
-- description
-- publisher
-- publishedYear
-- isbn
-- genres
-- series
-- duration
-- narrator
-- cover
-
-## Usage Example
-
-`/storytel/de/search?query=harry+potter`
