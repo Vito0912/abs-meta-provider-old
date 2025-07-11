@@ -8,6 +8,7 @@ The provider supports the following country codes, which correspond to different
 
 | Country Code | Country/Region | Language Name |
 | ------------ | -------------- | ------------- |
+| `en`         | *English       | English       |
 | `at`         | Austria        | German        |
 | `be`         | Belgium        | Dutch         |
 | `bg`         | Bulgaria       | Bulgarian     |
@@ -26,7 +27,6 @@ The provider supports the following country codes, which correspond to different
 | `lv`         | Latvia         | Latvian       |
 | `lt`         | Lithuania      | Lithuanian    |
 | `lu`         | Luxembourg     | French        |
-| `mt`         | Malta          | English       |
 | `nl`         | Netherlands    | Dutch         |
 | `no`         | Norway         | Norwegian     |
 | `pl`         | Poland         | Polish        |
