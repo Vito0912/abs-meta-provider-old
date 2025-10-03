@@ -1,3 +1,6 @@
+> [!NOTE]
+> This was an attempt to create a framework for custom metadata providers. It was almost completely "vibecoded" (because I thought I would give it a try this time for a simple structure), but I don't like it. It's very inflexible and feels too AIish. Therefore, this is being archived.
+
 # ABS Meta
 
 A metadata provider framework for Audiobookshelf that aggregates audiobook and ebook metadata from multiple sources.
